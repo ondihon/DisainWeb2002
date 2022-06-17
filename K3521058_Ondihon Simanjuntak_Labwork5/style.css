@@ -1,0 +1,42 @@
+body{
+	padding: 0px;
+	margin: 0px;
+	background: #e1e1e1;
+}
+.header{
+	background: rgba(0, 0, 0, 1.9);
+	padding: 6px 24px;
+	text-align: left;
+	color: white;
+	margin: 0px;
+	letter-spacing: 1px;
+	font: caption;
+	font-size: 24px;
+	text-transform: uppercase;
+}
+.menu{
+	background-color: #008080;
+	padding: 10px 24px;
+	height: 100%;
+	position: sticky;
+	top: 0px;
+}
+a{
+	text-family: Times New Roman;
+	color: white;
+	margin: 20px;
+}
+.video-container{
+	position: relative;
+	z-index: -1;
+	top: 0px;
+}
+.video-container iframe{
+	width: 100%;
+	height: 90vh;
+}
+.contet{
+	padding: 0px 24px;
+	text-align: justify;
+	font-size: 20px;
+}
