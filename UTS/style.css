@@ -1,0 +1,317 @@
+/*landscape*/
+.body-bg{
+	background-color: #5352d4;
+}
+#warp{
+	border-radius: 5px;
+	background-color: #5352d4;
+	width: 300px;
+	height: 680px;
+	margin: 20px 0 0 30vh;
+	float: left;
+	list-style: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, .25);
+	position: fixed;
+	z-index: -1;
+}
+.avatar{
+	display: block;
+}
+.name{
+	text-align: center;
+	font-family: sans-serif;
+	color: white;
+}
+.Copyright{
+	padding-top: 100px;
+	display: inline-block;
+	text-align: center;
+	font-family: sans-serif;
+}
+.Copyright2{
+	display: none;
+}
+#konten{
+	background-color: white;
+	width: 690px;
+	height: auto;
+	margin: 20px 0 0 71vh;
+	padding: 20px 20px 20px 20px;
+	float: left;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0,.25);
+	z-index: 10;
+}
+#social-icon{
+	font-family: sans-serif;
+    font-size: 14px;
+	display: block;
+	padding: 0 0 0 50px ;
+	position: fixed;
+	align-content: center;
+	color: white;
+}
+.facebook{
+	height: 50px;
+	display: flex;
+}
+.twitter{
+	height: 50px;
+	display: flex;
+}
+.google{
+	height: 50px;
+	display: flex;
+}
+.instagram{
+	height: 50px;
+	display: flex;
+}
+.section-header{
+	color: #f74470;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0;
+    text-transform: uppercase;
+    position: relative;
+}
+.intro{
+	font-family: sans-serif;
+    font-size: 14px;
+}
+.skill{
+	font-family: sans-serif;
+    font-size: 14px;
+}
+.progress1{
+	background-color: #E0E0E0;
+	width: 100%;
+	height: 5px;
+	border-radius: 5px;
+}
+.progress-Photoshop{
+	background-color: black;
+	width: 40%;
+	height: 5px;
+	border-radius: 5px;
+}
+.progress-HTML{
+	background-color: black;
+	width: 60%;
+	height: 5px;
+	border-radius: 5px;
+}
+.progress-Python{
+	background-color: black;
+	width: 70%;
+	height: 5px;
+	border-radius: 5px;
+}
+.progress-CorelDraw{
+	background-color: black;
+	width: 30%;
+	height: 5px;
+	border-radius: 5px;
+}
+.header-isi{
+	color: #f74470;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0;
+    text-transform: uppercase;
+    position: relative;
+}
+.isi{
+	font-family: sans-serif;
+    font-size: 14px;
+}
+.header-organisasi{
+	color: #f74470;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0;
+    text-transform: uppercase;
+    position: relative;
+}
+.group{
+	font-family: sans-serif;
+    font-size: 14px;
+}
+/*portrait*/
+@media only screen and (max-width: 640px){
+	#warp{
+		align-content: center;
+		padding: 0 0 0 0px;
+		top: 0;
+		position: fixed;
+		width: 368px;
+		height: 100px;
+		display: block;
+		margin: 0 0 0 0;
+		margin-top: 25px;
+		margin-left: 15px;
+		z-index: 10;
+
+	}
+	.avatar{
+		float: left;
+		padding-left: 20px;
+	}
+	.avatar img{
+		height: 50%;
+		width: 50px;
+	}
+	.name{
+		display: block;
+		padding: 0 0 0 20px;
+		padding-top: 10px;
+		position: relative;
+		float: left;
+	}
+	.name h1{
+		font-size: 10px;
+
+	}
+	.name span{
+		float: left;
+		font-size: 8px;
+	}
+	#social-icon{
+		display: block;
+		width: 200px;
+		height: 20px;
+		padding: 0 0 0 50px ;
+		padding-top: 40px;
+		position: fixed;
+	}
+	#social-icon ul a{
+		display: block;
+		list-style-type: none;		
+	}
+	.facebook{
+		font-size: 5px;
+		height: 20px;
+		width: auto;
+		float: left;
+	}
+	.facebook img{
+		height: 20px;
+		width: auto;
+		float: left;
+	}
+	.twitter{
+		font-size: 5px;
+		height: 20px;
+		width: auto;
+		float: left;
+	}
+	.twitter img{
+		height: 20px;
+		width: auto;
+		float: left;
+	}
+	.google{
+		font-size: 5px;
+		height: 20px;
+		width: auto;
+		float: left;
+	}
+	.google img{
+		height: 20px;
+		width: auto;
+		float: left;
+	}
+	.instagram{
+		font-size: 5px;
+		height: 20px;
+		width: auto;
+		float: left;
+	}
+	.instagram img{
+		height: 20px;
+		width: auto;
+		float: left;
+		position: relative;
+	}
+	.Copyright{
+		display: none;
+	}
+	/*isi*/
+	#konten{
+		width: 355px;
+		height: auto;
+		margin: 0 0 0 0;
+		margin-top: 50px;
+		z-index: -1;
+	}
+	.section-header{
+	    font-size: 14px;
+	    margin-top: 50px;
+	    letter-spacing: 1px
+	}
+	.intro{
+	font-family: sans-serif;
+    font-size: 12px;
+	}
+	.skill{
+	    font-size: 12px;
+	}
+	.progress1{
+		width: 100%;
+		height: 2px;
+	}
+	.progress-Photoshop{
+		background-color: black;
+		width: 40%;
+		height: 2px;
+		border-radius: 5px;
+	}
+	.progress-HTML{
+		background-color: black;
+		width: 60%;
+		height: 2px;
+		border-radius: 5px;
+	}
+	.progress-Python{
+		background-color: black;
+		width: 70%;
+		height: 2px;
+		border-radius: 5px;
+	}
+	.progress-CorelDraw{
+		background-color: black;
+		width: 30%;
+		height: 2px;
+		border-radius: 5px;
+	}
+	.header-isi{
+	    font-size: 12px;
+	    letter-spacing: 1px;
+	}
+	.isi{
+	    font-size: 12px;
+	}
+	.header-organisasi{
+	    font-size: 14px;
+	    letter-spacing: 1px;
+	}
+	.group{
+	    font-size: 12px;
+	}
+	.Copyright2{
+		font-size: 8px;
+		padding-top: 100px;
+		display: inline-block;
+		text-align: center;
+		font-family: sans-serif;
+	}
+}
