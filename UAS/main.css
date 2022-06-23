@@ -1,0 +1,77 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #f2f6e9;
+}
+
+.navbar {
+    background: rgba(26, 137, 239, 0.88);
+    padding: 10px;
+}
+
+.logo {
+    height: 58px;
+    width: auto;
+}
+.nav-link,
+.navbar-brand {
+    color: #fff;
+    cursor: pointer;
+}
+.nav-link {
+    margin-right: 1em !important;
+}
+
+.nav-link:hover {
+    color: #3873CA;
+}
+
+.navbar-collapse {
+    justify-content: flex-end;
+}
+
+.header {
+    background-image: url('images/pesawat.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+}
+.navbar-brand:hover {
+    color: #3873CA;
+}
+
+#link {
+    padding-inline-start: 5%;
+}
+
+#menu {
+    background: rgba(26, 137, 239);
+	height: 100%;
+	position: sticky;
+	top: 0px;
+}
+
+.page-footer {
+    background-color: rgba(0, 25, 115, 1);
+    color: #ccc;
+    padding: 60px 0 30px;
+}
+
+.footer-copyright {
+    color: rgb(255, 255, 255);
+    padding: 40px 0;
+}
+
+@media (max-width: 575.98px){
+    .gamabarPayment {
+        height: auto;
+        width: 100%;
+    }
+
+    #link {
+        padding-inline-start: 1%;
+    }
+    
+
+}
