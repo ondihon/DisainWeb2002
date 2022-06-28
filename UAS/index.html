@@ -4,75 +4,445 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Alcapone</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" type="text/css" href="login/style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
 </head>
 <body>
     <!-- Navigasi 1 -->
-    <nav class="navbar navbar-expand-md">
+    <nav class="navbar navbar-expand-md" id="menu">
         <a class="navbar-brand" href="#"><img class="logo" src="images/Logo1.png"></a>
-        <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="main-navigation">
+        <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link " href="#">facebook</a>
+                    <a class="nav-link " href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">twitter</a>
+                    <a class="nav-link " href="#Overview">Overview</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">instagram</a>
+                    <a class="nav-link" href="#About">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#Check-in">Check-in</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#logIn-model">
+                        Log in
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="modal" data-bs-target="#singUP-model"> Sign Up</a>
                 </li>
             </ul>
         </div>
     </nav>
     <!-- End of Navigasi 1 -->
 
+        <!-- pop up logIn-->
+        <div class="modal fade" id="logIn-model" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="exampleModalLabel form-title text-center">Alcapone Login</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column text-center">
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email1"placeholder="Your email address..." required>
+                                </div>
+                                <p>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password1" placeholder="Your password..." required>
+                                </div>
+                                <a type="button" class="btn btn-primary btn-block btn-round" data-bs-toggle="modal" data-bs-target="#suksesModal">Login</a>
+                            </form>
+                            
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="modal-footer d-flex justify-content-center">
+                            <div class="signup-section">Not a member yet? <a data-bs-toggle="modal" data-bs-target="#singUP-model" class="text-info "> Sign Up</a>.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of pop up logIn-->
+
+        <!-- pop up singup1-->
+        <div class="modal fade" id="singUP-model" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="exampleModalLabel form-title text-center">Alcapone Registration</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column">
+                            <form>
+                                <div class="form-group">
+                                    <label>Full Name</label>
+                                    <input type="text" class="form-control" id="Full Name"placeholder="Enter your name" required>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <label>Username</label>
+                                    <input type="text" class="form-control" id="Username" placeholder="Enter your username" required>
+                                </div>
+                                <a type="button" class="btn btn-primary btn-block btn-round btn2" data-bs-toggle="modal" data-bs-target="#singUP2-model">Next</a>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of pop up singup1-->
+
+        <!-- pop up singup2-->
+        <div class="modal fade" id="singUP2-model" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title fw-bold" id="exampleModalLabel form-title text-center">Alcapone Registration</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="d-flex flex-column">
+                            <form>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" class="form-control" id="Email"placeholder="Enter your Email" required>
+                                </div>
+                                <div class="form-group">
+                                    <div class="form-group">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" id="password1" placeholder="Enter your password" required>
+                                    </div>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <div class="form-group">
+                                        <label>Confirm Password</label>
+                                        <input type="password" class="form-control" id="Confirmpassword1" placeholder="Confirm your password" required>
+                                    </div>
+                                </div>
+                                <a type="button" class="btn btn-primary btn-block btn-round btn2" data-bs-toggle="modal" data-bs-target="#suksesModal">Next</a>
+                            </form>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of pop up singup2-->
+
+        <!--pop up sukses-->
+        <!-- Modal -->
+        <div class="modal fade" id="suksesModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <h5 class="fw-bold">Sukses</h5>
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-primary" href="index.html">Ok</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--end of  pop up sukses-->
+
     <!-- Header -->
     <header class="header container-fluid">
-
+        <div class="container-fluid h-100">
+            <div class="row h-100">
+                <div class="align-self-end mb-4 page-title ">
+                    <div class="col-md-12 mb-2 text-left">
+                        <div class="card">
+                            <div class="row form-group kotak">
+                                <div class="title py-1 fw-bold">
+                                    <a>Cari dan Pesan Tiket</a>
+                                </div>
+                                <div class="Pilih-tiket col-lg-12">
+                                    <div id="opsi2">
+                                        <div class="row form-group">
+                                            <div class="col-sm-3">
+                                                <label for="" class="control-label">From</label>
+                                                <br>
+                                                <select class="custom-select browser-default select2">
+                                                    <option value=""></option>
+                                                    <option value="11">
+                                                        ACEH
+                                                    </option>
+                                                    <option value="12">
+                                                        SUMATERA UTARA
+                                                    </option>
+                                                    <option value="13">
+                                                        SUMATERA BARAT
+                                                    </option>
+                                                    <option value="14">
+                                                        R I A U
+                                                    </option>
+                                                    <option value="15">
+                                                        J A M B I
+                                                    </option>
+                                                    <option value="16">
+                                                        SUMATERA SELATAN
+                                                    </option>
+                                                    <option value="17">
+                                                        BENGKULU
+                                                    </option>
+                                                    <option value="18">
+                                                        LAMPUNG
+                                                    </option>
+                                                    <option value="19">
+                                                        KEPULAUAN BANGKA BELITUNG
+                                                    </option>
+                                                    <option value="21">
+                                                        KEPULAUAN RIAU
+                                                    </option>
+                                                    <option value="31">
+                                                        DKI JAKARTA
+                                                    </option>
+                                                    <option value="32">
+                                                        JAWA BARAT
+                                                    </option>
+                                                    <option value="33">
+                                                        JAWA TENGAH
+                                                    </option>
+                                                    <option value="34">
+                                                        DI YOGYAKARTA
+                                                    </option>
+                                                    <option value="35">
+                                                        JAWA TIMUR
+                                                    </option>
+                                                    <option value="36">
+                                                        B A N T E N
+                                                    </option>
+                                                    <option value="51">
+                                                        BALI
+                                                    </option>
+                                                    <option value="52">
+                                                        NUSA TENGGARA BARAT
+                                                    </option>
+                                                    <option value="53">
+                                                        NUSA TENGGARA TIMUR
+                                                    </option>
+                                                    <option value="61">
+                                                        KALIMANTAN BARAT
+                                                    </option>
+                                                    <option value="62">
+                                                        KALIMANTAN TENGAH
+                                                    </option>
+                                                    <option value="63">
+                                                        KALIMANTAN SELATAN
+                                                    </option>
+                                                    <option value="64">
+                                                        KALIMANTAN TIMUR
+                                                    </option>
+                                                    <option value="71">
+                                                        SULAWESI UTARA
+                                                    </option>
+                                                    <option value="73">
+                                                        SULAWESI SELATAN
+                                                    </option>
+                                                    <option value="74">
+                                                        SULAWESI TENGGARA
+                                                    </option>
+                                                    <option value="75">
+                                                        GORONTALO
+                                                    </option>
+                                                    <option value="76">
+                                                        SULAWESI BARAT
+                                                    </option>
+                                                    <option value="81">
+                                                        MALUKU
+                                                    </option>
+                                                    <option value="82">
+                                                        MALUKU UTARA
+                                                    </option>
+                                                    <option value="94">
+                                                        PAPUA
+                                                    </option>
+                                                    <option value="91">
+                                                        PAPUA BARAT
+                                                    </option>
+                                                    <option value="72">
+                                                        SULAWESI TENGAH
+                                                    </option>
+                                                    <option value="65">
+                                                        KALIMANTAN UTARA
+                                                    </option>
+                                                                                            </select>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <label for="" class="control-label">To</label>
+                                                <br>
+                                                <select class="custom-select browser-default select2">
+            
+                                                    <option value=""></option>
+                                                    <option value="11">
+                                                        ACEH
+                                                    </option>
+                                                    <option value="12">
+                                                        SUMATERA UTARA
+                                                    </option>
+                                                    <option value="13">
+                                                        SUMATERA BARAT
+                                                    </option>
+                                                    <option value="14">
+                                                        R I A U
+                                                    </option>
+                                                    <option value="15">
+                                                        J A M B I
+                                                    </option>
+                                                    <option value="16">
+                                                        SUMATERA SELATAN
+                                                    </option>
+                                                    <option value="17">
+                                                        BENGKULU
+                                                    </option>
+                                                    <option value="18">
+                                                        LAMPUNG
+                                                    </option>
+                                                    <option value="19">
+                                                        KEPULAUAN BANGKA BELITUNG
+                                                    </option>
+                                                    <option value="21">
+                                                        KEPULAUAN RIAU
+                                                    </option>
+                                                    <option value="31">
+                                                        DKI JAKARTA
+                                                    </option>
+                                                    <option value="32">
+                                                        JAWA BARAT
+                                                    </option>
+                                                    <option value="33">
+                                                        JAWA TENGAH
+                                                    </option>
+                                                    <option value="34">
+                                                        DI YOGYAKARTA
+                                                    </option>
+                                                    <option value="35">
+                                                        JAWA TIMUR
+                                                    </option>
+                                                    <option value="36">
+                                                        B A N T E N
+                                                    </option>
+                                                    <option value="51">
+                                                        BALI
+                                                    </option>
+                                                    <option value="52">
+                                                        NUSA TENGGARA BARAT
+                                                    </option>
+                                                    <option value="53">
+                                                        NUSA TENGGARA TIMUR
+                                                    </option>
+                                                    <option value="61">
+                                                        KALIMANTAN BARAT
+                                                    </option>
+                                                    <option value="62">
+                                                        KALIMANTAN TENGAH
+                                                    </option>
+                                                    <option value="63">
+                                                        KALIMANTAN SELATAN
+                                                    </option>
+                                                    <option value="64">
+                                                        KALIMANTAN TIMUR
+                                                    </option>
+                                                    <option value="71">
+                                                        SULAWESI UTARA
+                                                    </option>
+                                                    <option value="73">
+                                                        SULAWESI SELATAN
+                                                    </option>
+                                                    <option value="74">
+                                                        SULAWESI TENGGARA
+                                                    </option>
+                                                    <option value="75">
+                                                        GORONTALO
+                                                    </option>
+                                                    <option value="76">
+                                                        SULAWESI BARAT
+                                                    </option>
+                                                    <option value="81">
+                                                        MALUKU
+                                                    </option>
+                                                    <option value="82">
+                                                        MALUKU UTARA
+                                                    </option>
+                                                    <option value="94">
+                                                        PAPUA
+                                                    </option>
+                                                    <option value="91">
+                                                        PAPUA BARAT
+                                                    </option>
+                                                    <option value="72">
+                                                        SULAWESI TENGAH
+                                                    </option>
+                                                    <option value="65">
+                                                        KALIMANTAN UTARA
+                                                    </option>
+                                                                                            </select>
+                                            </div>
+                                            <div class="input-field col-sm-3">
+                                                <label>Departure Dater</label>
+                                                <br>
+                                                <input type="date" placeholder="Departure Date" required>
+                                            </div>
+                                            <div class="input-field col-sm-3">
+                                                <label>Return Date</label>
+                                                <br>
+                                                <input type="date" placeholder="Return Date" required>
+                                            </div>
+                                        </div>
+                                        <div class="py-3">
+                                            <a type="button" class="btn btn-primary cst-btn">Cari Tiket</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <!-- End of Header -->
-
-    <!-- Navigasi 2 -->
-    <nav class="navbar navbar-expand-md" id="menu">
-        <a class="navbar-brand" id="link" href="#Overview">Overview</a>
-        <a class="navbar-brand" id="link" href="#About">About</a>
-        <a class="navbar-brand" id="link" href="#Check-in">Check-in</a>
-        <a class="navbar-brand" id="link" href="#Accepted Payment Methods">Accepted Payment Methods</a>
-        <a class="navbar-brand" id="link" href="#Contact">Contact</a>
-    </nav>
-    <!-- End of Navigasi 2 -->
-
+    
     <!-- Features -->
-    <div class="container features">
+    <div class="container py-5">
         <div class="isi-Overview">
-            <h2 class="feature-title"><a name="Overview">Overview</a></h2>
-            <h4>ALCAPONE</h4><br>
-            <h4 class="feature-title">Introduction</h4>
+            <h2 class="feature-title fw-bold"><a name="Overview">Overview</a></h2>
+            <h5>ALCAPONE</h5><br>
+            <h5 class="feature-title">Introduction</h5>
             <p>
                 Alcapone adalah maskapai penerbangan full flight yang mengoperasikan rute domestik & internasional. Jatah bagasi kabin yang diberikan oleh maskapai ini adalah 7 kg dan ukuran maksimal 56 cm x 36 cm x 23 cm (P x L x T). Tarif rute internasional sudah termasuk jatah bagasi tercatat sebesar 23 kg sedangkan tarif tiket rute domestik sudah termasuk jatah bagasi tercatat gratis sebesar 20 kg. Penumpang dapat check-in di bandara 180 menit sebelum waktu keberangkatan penerbangan yang dijadwalkan. Check in online tersedia untuk penerbangan dengan maskapai di situs resmi Alcapone. Bisa dilakukan 2 hari sebelum jadwal keberangkatan penerbangan.
             </p>
-            <h4 class="feature-title">How to pay</h4>
+            <h5 class="feature-title">How to pay</h5>
             <p>
                 Pembayaran pemesanan Alcapone Anda di Airpaz dapat dilakukan melalui kartu kredit bank, PayPal, transfer bank, dan metode over the counter. Untuk informasi selengkapnya, kunjungi halaman Panduan Pembayaran Airpaz.
             </p>
         </div>
 
         <div class="isi-About">
-            <h2 class="feature-title"><a name="About">About</a></h2>
-            <h4>ALCAPONE</h4><br>
-            <h4 class="feature-title">Company Profile</h4>
+            <h2 class="feature-title fw-bold"><a name="About">About</a></h2>
+            <h5 class="garis">ALCAPONE</h5><br>
+            <h5 class="feature-title">Company Profile</h5>
             <p>
                 Alcapone adalah maskapai penerbangan Indonesia full service yang tidak hanya melayani penerbangan domestik di Indonesia tetapi juga rute internasional. Hingga September 2018, Alcapone melayani 91 destinasi di seluruh dunia – 69 destinasi domestik dan 22 destinasi internasional. Destinasi tersebut antara lain Asia (Regional South East Asia, Middle East, China, Japan, and South Korea), Australia dan Eropa.            </p>
             <p>
                 Jumlah destinasi dan fasilitas dalam penerbangan yang ditawarkan oleh maskapai dilengkapi oleh tiga kelas kabin yang berbeda untuk penerbangan mereka. Alcapone menawarkan pengalaman Economy, Business, dan First Class bagi penumpangnya.
             </p>
-            <h4 class="feature-title">History</h4>
+            <h5 class="feature-title">History</h5>
             <p>
                 Alcapone pertama kali melakukan penerbangan komersial pada 26 Januari 2002. Dari Kalkuta menuju Rangoon, menggunakan Pesawat DC-3 Dakota dengan nomor RI 001 dan atas nama Alcapone Airways . Namun, penerbangan pertamanya yang menggunakan nama Alcapone di atasnya adalah penerbangan Jakarta-Yogyakarta pada 28 Desember 1949. Pesawat DC-3 yang terdaftar sebagai PK-DPD itu bertugas menjemput Presiden Alcapone corporate.
             </p>
@@ -82,31 +452,83 @@
         </div>
 
         <div class="isi-Check-in">
-            <h2 class="feature-title"><a name="Check-in">Check-in</a></h2>
-            <h4>ALCAPONE</h4><br>
-            <h4 class="feature-title">Web Check-in</h4>
+            <h2 class="feature-title fw-bold"><a name="Check-in">Check-in</a></h2>
+            <h5>ALCAPONE</h5><br>
+            <h5 class="feature-title">Web Check-in</h5>
             <p>
                 Sama seperti maskapai lainnya, Alcapone juga menyediakan layanan check-in online bagi penumpangnya minimal 4 jam (rute internasional) dan 2 jam (rute domestik) sebelum waktu keberangkatan.
             </p>
-            <h4 class="feature-title">Airport Check-in</h4>
+            <h5 class="feature-title">Airport Check-in</h5>
             <p>
                 Konter check-in Alcapone buka 3 jam hingga 1 jam sebelum jadwal keberangkatan. Anda disarankan untuk check-in setidaknya setengah jam sebelum check-in dan loket penyerahan bagasi di bandara tutup.
             </p>
         </div>
 
         <div class="Payment">
-            <h3 class="feature-title"><a name="Accepted Payment Methods">Accepted Payment Methods</a></h3>
+            <h2 class="feature-title fw-bold"><a>Accepted Payment Methods</a></h2>
             <img class="gamabarPayment" src="images/payment.png">
         </div>
         
     </div>
     <!-- End of Features -->
 
+    <!--carad-->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Harga Penerbangan Wisata lokal</h2>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <img src="images/1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bolder">Pura Besakih</h5>
+                            <p class="card-text">Harga mulai dari</p>
+                            <h6 class="fw-light">Rp.700.000,00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <img src="images/2.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bolder">Kepulauan Derawan</h5>
+                            <p class="card-text">Harga mulai dari</p>
+                            <h6 class="fw-light">Rp.850.000,00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <img src="images/3.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bolder">Pantai Parai Tenggiri</h5>
+                            <p class="card-text">Harga mulai dari</p>
+                            <h6 class="fw-light">Rp.800.000,00</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="card">
+                        <img src="images/4.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bolder">Nusa Dua</h5>
+                            <p class="card-text">Harga mulai dari</p>
+                            <h6 class="fw-light">Rp.550.000,00</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--End of carad-->
+
     <!-- Footer -->
     <footer class="page-footer">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-12">
+                <div class="col-lg-8 col-md-8 col-sm-10">
                     <h6 class="text-uppercase font-weight-bold">Additional Information</h6>
                     <p>
                         Website ini masih dalam pengembangan belum bisa digunakan untuk komersial.
@@ -114,7 +536,7 @@
                     </p>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-12">
-                    <h6 class="text-uppercase font-weight-bold"><a name="Contact">Contact</a></h6>
+                    <h6 class="text-uppercase font-weight-bold"><a>Contact</a></h6>
                     <p>Ondihon simanjuntak NIM K3521058,
                         xxx NIM xxx
                         <br />info@mywebsite.com

@@ -1,0 +1,64 @@
+.container {
+    padding: 2rem 0rem;
+}
+label{
+    font-size: 12px;
+    font-weight: 500;
+    color: #2e2e2e;
+}
+
+.tiket{
+    max-width: 900px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 30px;
+    margin: 0 15px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+option{
+    font-size: small;
+}
+
+.custom-select{
+    font-size: small;
+    width: 80%;
+}
+
+.input-field input, select{
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 42px;
+    margin: 8px 0;
+}
+
+.kotak{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+@media (min-width: 576px) {
+.modal-dialog {
+    max-width: 400px;
+    }
+.modal-dialog .modal-content {
+    padding: 1rem;
+    }
+}
+
+.btn-round {
+    margin-top: 10px;
+    padding-right: 40%;
+    padding-left: 40%;
+    border-radius: 3rem;
+}
+.btn2{
+    padding-left: 45%;
+    padding-right: 45%;
+}

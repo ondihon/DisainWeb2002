@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     background: #f2f6e9;
+    font-family:'Montserrat', sans-serif
 }
 
 .navbar {
@@ -35,21 +36,23 @@ body {
     background-size: cover;
     background-position: center;
     position: relative;
-    height: 100vh;
+    height: 80vh;
 }
 .navbar-brand:hover {
     color: #3873CA;
 }
 
-#link {
-    padding-inline-start: 5%;
-}
 
 #menu {
     background: rgba(26, 137, 239);
 	height: 100%;
 	position: sticky;
 	top: 0px;
+    z-index: 999;
+}
+
+.Pilih-tiket {
+    padding-inline-end: 10%;
 }
 
 .page-footer {
@@ -64,14 +67,17 @@ body {
 }
 
 @media (max-width: 575.98px){
+    .feature-title,
+    h4,
+    h6,
+    p{
+        margin: 10px;
+    }
     .gamabarPayment {
         height: auto;
         width: 100%;
     }
-
-    #link {
-        padding-inline-start: 1%;
+    .header{
+        height: 60vh;
     }
-    
-
 }
